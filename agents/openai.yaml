@@ -1,0 +1,7 @@
+interface:
+  display_name: "TraeBook"
+  short_description: "编排可分享的互动教学电子书"
+  default_prompt: "Use $traebook to turn my learning topic into one research-backed interactive chapter with a manifest and shareable state."
+
+policy:
+  allow_implicit_invocation: true

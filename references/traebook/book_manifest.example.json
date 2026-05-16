@@ -1,0 +1,19 @@
+{
+  "bookId": "traebook-demo",
+  "title": "TraeBook：示例书",
+  "version": "0.1.0",
+  "theme": {
+    "light": "fixed",
+    "dark": "fixed"
+  },
+  "routes": [
+    { "id": "entry", "type": "entry", "path": "/book/index.html", "title": "入口" },
+    { "id": "topic-ch1", "type": "chapter", "path": "/book/chapters/topic-ch1.html", "title": "第一章：示例章节标题", "tags": ["示例主题"] },
+    { "id": "topic-ch2", "type": "chapter", "path": "/book/chapters/topic-ch2.html", "title": "第二章：示例章节标题", "tags": ["示例主题"] }
+  ],
+  "share": {
+    "enabled": true,
+    "strategy": "url_state_id",
+    "basePath": "/share/"
+  }
+}
