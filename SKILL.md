@@ -1,6 +1,6 @@
 ---
 name: traebook
-description: 创建、继续、修订和发布 TraeBook 可拔插教学电子书。Use when Codex needs to turn a learning topic into a shareable interactive ebook, chapter HTML, concept graph, manifest/index/chapter files, exercises, learning-path design, AlgoBook/TraeBook style chapter output, or when the user asks to continue or patch an existing chapter. Enforces one chapter per turn, research-backed sequencing, meaningful HTML interactivity, shareable state, original green light/dark UI theme parity, question-card answer disclosure, and no-illustration dynamic fallback.
+description: 创建、继续、修订和发布 TraeBook 可拔插教学电子书。Use when user needs to turn a learning topic into a shareable interactive ebook, chapter HTML, concept graph, manifest/index/chapter files, exercises, learning-path design, AlgoBook/TraeBook style chapter output, or when the user asks to continue or patch an existing chapter. Enforces one chapter per turn, research-backed sequencing, meaningful HTML interactivity, shareable state, original green light/dark UI theme parity, question-card answer disclosure, and no-illustration dynamic fallback.
 version: 1.0.1
 ---
 

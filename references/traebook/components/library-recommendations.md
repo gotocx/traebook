@@ -1,6 +1,6 @@
 # 组件库推荐（用于 TraeBook 书籍插件）
 
-你提到的 “font-design” 我理解大概率是想说 **Ant Design**（业界最常见），这里给出可选方案，并说明适配场景。
+推荐组件使用Ant Design，或[fonted-skill。](https://www.skills.sh/anthropics/skills/frontend-design)中组件进行设计。
 
 ## A. Web React 项目（推荐优先级）
 
@@ -43,4 +43,3 @@
 7. `Share`：分享（复制链接/导出状态）
 
 > 任何新增组件都必须说明它解决哪个学习问题，否则禁止加入。
-
