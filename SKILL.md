@@ -1,7 +1,7 @@
 ---
 name: traebook
 description: 创建、继续、修订和发布 TraeBook 可拔插教学电子书。Use when user needs to turn a learning topic into a shareable interactive ebook, chapter HTML, concept graph, manifest/index/chapter files, exercises, learning-path design, AlgoBook/TraeBook style chapter output, or when the user asks to continue or patch an existing chapter. Enforces one chapter per turn, research-backed sequencing, meaningful HTML interactivity, shareable state, original green light/dark UI theme parity, question-card answer disclosure, and no-illustration dynamic fallback.
-version: 1.0.2
+version: 1.0.4
 ---
 
 # TraeBook
@@ -12,7 +12,7 @@ version: 1.0.2
 <!-- @触发条件: 用户要求制作学习书、互动章节、教学路径、TraeBook/AlgoBook 书系或继续/修订已有章节 -->
 
 > **一句话**: TraeBook 是教学编排器，不是普通写作器；先设计学习路径，再逐章产出可运行、可分享、可复现的书籍页面。
-> **版本**: v1.0.2
+> **版本**: v1.0.4
 > **用途**: 生成同一视觉/信息风格的可拔插教学电子书
 
 ## @工作流: TraeBook 教学编排
@@ -57,6 +57,8 @@ version: 1.0.2
 - @动作: 每章至少使用 2 种有意义的 HTML 交互模式；交互必须回答 Step、Why、What-if、Check 或 Pitfall 中至少一个学习问题。
 - @动作: 每章必须有可复现分享策略，最低可用 URL 参数或 `share/*.json` 保存章节状态。
 - @动作: `index.html` 必须保留章节目录链接；对 manifest 中所有已知章节，以及本轮计划中的下一章占位，都要有可点击或明确禁用的章节入口。
+- @动作: `index.html` 必须提供视觉高亮的“首次进入 / 继续下一章 / 推荐下一章”CTA，放在目录上方或目录卡片中；不能只把下一章藏成普通文本链接。
+- @动作: 即使全书目前只有 1 章，`index.html` 也必须把第 1 章做成明显高亮入口，让读者一进入书籍主页就知道点击哪里开始。
 - @动作: 追加新章节时必须回写前一章导航；生成 `ch2.html` 后，`ch1.html` 顶部或底部必须出现指向 `ch2.html` 的“下一章”链接。
 - @动作: 插图必须服务理解；当没有可用插图 URL 时，立即执行“无插图动态降级”，生成结构化 HTML/CSS 视觉模块，不留空白图位、不伪造远端 URL、不使用 base64。
 - @动作: 保留 TraeBook 原 UI 配色体系：日间使用绿色系 light 变量，夜间使用 dark 变量；主题切换按钮的图标、文案、选中态和进入页面后的 `data-theme` 必须一致。
@@ -149,6 +151,8 @@ version: 1.0.2
 - @动作: 对照 `references/traebook/checklists/quality.md` 执行发布前检查。
 - @动作: 确认页面首屏能看出本章主题、学习目标、进度与可操作入口。
 - @动作: 确认 `index.html` 中存在 manifest 所列每章的链接，且从 home 可直接进入 `ch1` 与已生成的 `ch2`。
+- @动作: 确认 `index.html` 的下一章或首次进入入口有高亮 CTA、按钮或推荐卡片，移动端也明显可点击。
+- @动作: 确认单章书籍的 `index.html` 也高亮第 1 章入口，而不是只显示普通导航按钮。
 - @动作: 确认除末章外，每个章节页都有指向下一章的链接；追加章节后要回测前一章链接是否已更新。
 - @动作: 确认移动端和桌面端文字不溢出、不遮挡、不依赖插图才能理解。
 - @动作: 确认主题切换按钮、页面 `data-theme`、localStorage/URL 状态和实际颜色一致，日间必须是绿色系 light 方案。
@@ -168,6 +172,8 @@ version: 1.0.2
 
 ## 版本历史
 
+- **v1.0.4** (2026-05-17) - 明确单章书籍首页也必须高亮第 1 章入口，并保持与站点自动高亮脚本一致
+- **v1.0.3** (2026-05-17) - 强化 index 下一章高亮规则：目录页必须提供明显 CTA，不能只给普通章节链接
 - **v1.0.2** (2026-05-17) - 修复章节导航生成规则：home 必须保留所有章节链接，追加章节时必须回写前一章的下一章链接
 - **v1.0.1** (2026-05-16) - 强化原 UI 绿色日间/夜间主题保留、主题切换按钮状态一致性，以及题卡“标题=问题、展开=答案/解析”规则
 - **v1.0.0** (2026-05-16) - 将原 TraeBook 资料封装为可触发 Skill，补齐语义化工作流、按需参考入口、UI 检查点与无插图动态降级规则
